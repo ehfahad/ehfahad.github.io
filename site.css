@@ -48,7 +48,7 @@ h3{font-size:18px;font-weight:600;margin:0 0 8px}
 .affil{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;padding:26px 0 30px;border-bottom:1px solid var(--line)}
 .aff{text-align:center;font-size:12.5px;color:var(--muted);line-height:1.45}
 .aff img{height:46px;max-width:120px;object-fit:contain;display:block;margin:0 auto 10px}
-.aff b{color:var(--text);font-weight:600;display:block;font-size:13px}
+.aff b{color:var(--text);font-weight:600;font-size:13px;min-height:2.9em;display:flex;align-items:flex-end;justify-content:center;line-height:1.45}
 [data-theme="dark"] .aff img,[data-theme="dark"] .logo img{background:#fff;border-radius:6px;padding:3px}
 /* news */
 .news{list-style:none;margin:0;padding:0}
