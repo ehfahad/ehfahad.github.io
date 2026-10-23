@@ -2,7 +2,7 @@
 
 <html lang="en">
 <head>
-<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
 <title>Teaching &amp; Mentoring | Emam Hossain</title>
 <meta content="Teaching and mentoring by Emam Hossain: undergraduate courses, graduate teaching, guest lectures, workshops, and student mentoring." name="description"/>
 <meta content="Emam Hossain" name="author"/>
@@ -16,63 +16,65 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
-<link href="site.css" rel="stylesheet"/><script src="site.js"></script>
+<link href="site.css?v=2026-10-23" rel="stylesheet"/><script src="site.js?v=2026-10-23"></script>
 </head>
 <body>
-<nav><div class="wrap"><a class="brand" href="index.html"><b>Emam</b> Hossain</a>
-<div class="menu"><a href="index.html">Home</a><a href="research.html">Research</a><a href="publications.html">Publications</a><a class="active" href="teaching.html">Teaching &amp; Mentoring</a><a href="experience.html">Experience</a><a href="news.html">News</a><a href="awards.html">Awards &amp; Service</a></div>
-<div class="navr"><button aria-label="Switch between light and dark mode" onclick="toggleTheme()" title="Light or dark mode"><i class="fa-solid fa-circle-half-stroke"></i></button>
-<button aria-expanded="false" aria-label="Menu" class="menu-btn" onclick="toggleMenu(this)"><i class="fa-solid fa-bars"></i></button></div></div></nav>
-<main class="wrap">
+<a class="skip-link" href="#main">Skip to content</a>
+<nav aria-label="Main navigation"><div class="wrap"><a class="brand" href="index.html"><b>Emam</b> Hossain</a>
+<div class="menu" id="main-menu"><a href="index.html">Home</a><a href="research.html">Research</a><a href="publications.html">Publications</a><a aria-current="page" class="active" href="teaching.html">Teaching</a><a href="experience.html">Experience</a><a href="news.html">News</a><a href="awards.html">Service</a></div>
+<div class="navr"><label class="sr-only" for="theme-mode">Appearance</label><select class="theme-control" id="theme-mode" onchange="setTheme(this.value)" title="Appearance: Auto follows your device"><option value="system">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select>
+<button aria-controls="main-menu" aria-expanded="false" aria-label="Menu" class="menu-btn" onclick="toggleMenu(this)"><i aria-hidden="true" class="fa-solid fa-bars"></i></button></div></div></nav>
+<main class="wrap" id="main" tabindex="-1">
 <div class="pagehead"><p class="eyebrow">Teaching &amp; Mentoring</p><h1>Teaching &amp; Mentoring</h1>
-<p class="lead">I teach through active, student-centered learning, designing each course around what students must be able to do rather than what I must cover. I want students to leave able to judge a claim on their own: what a method assumes, how to build it, where it breaks, and how to evaluate it.</p></div>
-<section><p class="eyebrow">Lecturer, Department of Computer Science and Engineering</p><h2>Port City International University, Bangladesh <span class="yrs">2018–2021</span></h2>
-<p style="margin:0">I taught twelve undergraduate computer science courses with classes of 20 to 60 students, and I taught the companion lab in nine of them. I used think-pair-share in lectures and pair programming in labs.</p>
+<p class="lead">I teach through active, student-centered learning, designing each course around what students must be able to do rather than what I must cover. I want students to leave able to judge a claim on their own: what a method assumes, how to build it, where it breaks, and how to evaluate it.</p></div>
+<section><p class="eyebrow">Lecturer, Department of Computer Science and Engineering</p><h2>Port City International University in Bangladesh <span class="yrs">2018–2021</span></h2>
+<p style="margin:0">I taught twelve undergraduate computer science courses with classes of 20 to 60 students, and I taught the companion lab in nine of them. I used think-pair-share in lectures and pair programming in labs.</p>
 <p class="grp">AI and machine learning</p><div class="cgrid"><div class="course"><div class="code">CSE 341</div><div class="name">Artificial Intelligence</div></div></div><p class="grp">Programming</p><div class="cgrid"><div class="course"><div class="code">CSE 111</div><div class="name">Computer Fundamentals &amp; Programming Techniques</div></div><div class="course"><div class="code">CSE 121</div><div class="name">Structured Programming Language</div></div><div class="course"><div class="code">CSE 211</div><div class="name">Object Oriented Programming</div></div></div><p class="grp">Algorithms and theory</p><div class="cgrid"><div class="course"><div class="code">CSE 217</div><div class="name">Data Structure</div></div><div class="course"><div class="code">CSE 227</div><div class="name">Algorithms</div></div><div class="course"><div class="code">CSE 317</div><div class="name">Theory of Computing</div></div><div class="course"><div class="code">MATH 135</div><div class="name">Discrete Mathematics</div></div></div><p class="grp">Systems</p><div class="cgrid"><div class="course"><div class="code">CSE 231</div><div class="name">Operating Systems Concepts</div></div><div class="course"><div class="code">CSE 411</div><div class="name">Compiler</div></div><div class="course"><div class="code">CSE 421</div><div class="name">Computer Graphics</div></div><div class="course"><div class="code">CSE 333</div><div class="name">Computer Peripherals &amp; Interfacing</div></div></div>
-<div class="callout"><b>Teaching online.</b> For four semesters during the COVID-19 pandemic, I taught online on Zoom, using breakout rooms for pair and small-group work and online quizzes to check understanding.</div></section>
+<div class="callout"><b>Teaching online.</b> For four semesters during the COVID-19 pandemic, I taught online on Zoom, using breakout rooms for pair and small-group work and online quizzes to check understanding.</div></section>
 <section><p class="eyebrow">Graduate Teaching Assistant, Department of Information Systems</p><h2>University of Maryland, Baltimore County <span class="yrs">2022–2024</span></h2>
 <ul class="rows">
-<li><span class="when">Teaching assistant</span><span class="what"><b>IS 636 · Structured Systems Analysis and Design</b> <span class="lvl">Graduate</span><p>Fall 2022 and Spring 2023. Held office hours, graded assignments and exams, and advised student project teams. I found <a href="https://teammatesv4.appspot.com/" rel="noopener" target="_blank">TEAMMATES</a>, an online peer evaluation tool, set it up for the course, and ran every team peer evaluation in both semesters, from enrolling students and forming teams to scheduling each evaluation session.</p></span></li>
-<li><span class="when">Teaching assistant</span><span class="what"><b>IS 734 · Data Analytics for Cybersecurity</b> <span class="lvl">Graduate</span><p>Tutored students, gave written feedback, and graded coursework.</p></span></li>
-<li><span class="when">Teaching assistant</span><span class="what"><b>IS 603 · Decision Making Support Systems</b> <span class="lvl">Graduate</span><p>Tutored students, gave written feedback, and graded coursework.</p></span></li>
-<li><span class="when">Teaching assistant</span><span class="what"><b>IS 320 · Advanced Business Applications</b> <span class="lvl">Undergraduate</span><p>Taught the weekly lab sessions, designing exercises and assessing student work.</p></span></li>
+<li><span class="when">Teaching assistant</span><div class="what"><b>IS 636 · Structured Systems Analysis and Design</b> <span class="lvl">Graduate</span><p>Fall 2022 and Spring 2023. Held office hours, graded assignments and exams, and advised student project teams.</p><details class="lecture-details"><summary>Team peer evaluations</summary><p>I found <a href="https://teammatesv4.appspot.com/" rel="noopener" target="_blank">TEAMMATES</a>, an online peer evaluation tool, set it up for the course, and ran every team peer evaluation in both semesters, from enrolling students and forming teams to scheduling each evaluation session.</p></details></div></li>
+<li><span class="when">Teaching assistant</span><div class="what"><b>IS 734 · Data Analytics for Cybersecurity</b> <span class="lvl">Graduate</span><p>Tutored students, gave written feedback, and graded coursework.</p></div></li>
+<li><span class="when">Teaching assistant</span><div class="what"><b>IS 603 · Decision Making Support Systems</b> <span class="lvl">Graduate</span><p>Tutored students, gave written feedback, and graded coursework.</p></div></li>
+<li><span class="when">Teaching assistant</span><div class="what"><b>IS 320 · Advanced Business Applications</b> <span class="lvl">Undergraduate</span><p>Taught the weekly lab sessions, designing exercises and assessing student work.</p></div></li>
 </ul></section>
 <section><p class="eyebrow">Guest lectures and workshops</p><h2>Teaching from my research</h2>
 <ul class="rows">
-<li><span class="when">Spring 2026</span><span class="what"><b>IS 790 · Causal AI</b> <span class="lvl">Graduate</span><p><b>Causal representation learning.</b> Why statistical models fail under distribution shift; structural causal models; the independent causal mechanisms and sparse mechanism shift principles; disentangled representations; and case studies of CausalVAE and SCM-VAE, with in-class quizzes. I designed the lecture from recent papers and my own research, and afterward students wrote to me about using the methods in their own work.</p></span></li>
-<li><span class="when">Mar 2026</span><span class="what"><b>Explainable AI workshop · iHARP Artificial Intelligence Series</b><p>I led and presented the workshop, developed with Dr. Md Osman Gani: interpretable models and post-hoc explanations; LIME and SHAP; Grad-CAM and attention maps; causal and counterfactual explanations with DiCE; evaluation metrics such as faithfulness and stability; and hands‑on notebooks.</p>
-<div class="btns"><a href="https://drive.google.com/file/d/1rTRg3JnLAkLgs8PtU10dmli170zL_0Ex/view?usp=drive_link" rel="noopener" target="_blank">Slides</a><a href="https://drive.google.com/file/d/1_KXEGSL4fP1KiW75ihX1sPuWEuMF69WI/view?usp=sharing" rel="noopener" target="_blank">Recording</a><a href="https://iharp.umbc.edu/artificial-intelligence-series/" rel="noopener" target="_blank">Series page</a></div></span></li>
-<li><span class="when">Fall 2024, Fall 2025</span><span class="what"><b>IS 733 · Data Mining</b> <span class="lvl">Graduate</span><p><b>Deep sequence modeling.</b> Sequence modeling tasks; recurrent neural networks and backpropagation through time; vanishing gradients; and self-attention and Transformers, with in‑class quizzes.</p></span></li>
+<li><span class="when">Spring 2026</span><div class="what"><b>IS 790 · Causal AI</b> <span class="lvl">Graduate</span><p><b>Causal representation learning.</b> I designed the lecture from recent papers and my own research, with in-class quizzes.</p><details class="lecture-details"><summary>Lecture topics and student follow-up</summary><p>Why statistical models fail under distribution shift; structural causal models; the independent causal mechanisms and sparse mechanism shift principles; disentangled representations; and case studies of CausalVAE and SCM-VAE. Afterward, students wrote to me about using the methods in their own work.</p></details></div></li>
+<li><span class="when">Mar 2026</span><div class="what"><b>Explainable AI workshop · iHARP Artificial Intelligence Series</b><p>I led and presented the Explainable AI workshop, developed with Dr. Md Osman Gani, using hands-on notebooks.</p><details class="lecture-details"><summary>Workshop topics</summary><p>Interpretable models and post-hoc explanations; LIME and SHAP; Grad-CAM and attention maps; causal and counterfactual explanations with DiCE; and evaluation metrics such as faithfulness and stability.</p></details>
+<div class="btns"><a href="https://drive.google.com/file/d/1rTRg3JnLAkLgs8PtU10dmli170zL_0Ex/view?usp=drive_link" rel="noopener" target="_blank">Slides</a><a href="https://drive.google.com/file/d/1_KXEGSL4fP1KiW75ihX1sPuWEuMF69WI/view?usp=sharing" rel="noopener" target="_blank">Recording</a><a href="https://iharp.umbc.edu/artificial-intelligence-series/" rel="noopener" target="_blank">Series page</a></div></div></li>
+<li><span class="when">Fall 2024, Fall 2025</span><div class="what"><b>IS 733 · Data Mining</b> <span class="lvl">Graduate</span><p><b>Deep sequence modeling.</b> Sequence modeling tasks; recurrent neural networks and backpropagation through time; vanishing gradients; and self-attention and Transformers, with in-class quizzes.</p></div></li>
 </ul></section>
 <section id="mentoring"><p class="eyebrow">Mentoring</p><h2>Mentoring</h2>
-<p style="margin:0 0 6px">I enjoy helping students turn an interest into a real research question. I ask every mentee to name the assumption under which their method would fail, and to release their code and data with the paper.</p>
+<p style="margin:0 0 6px">I enjoy helping students turn an interest into a real research question. I ask every mentee to name the assumption under which their method would fail, and to release their code and data with the paper.</p>
 <div class="mentee"><div class="who">First-year Ph.D. student <span>· Causal AI Lab, UMBC (peer mentor)</span></div><div class="yrs">2026–present</div>
-<div class="proj">Moving into machine learning from electrical engineering: building foundations, reading the literature, and designing first experiments.</div></div>
+<div class="proj">Moving into machine learning from electrical engineering: building foundations, reading the literature, and designing first experiments.</div></div>
 <div class="mentee"><div class="who">High school student <span>· iHARP Education and Outreach Program</span></div><div class="yrs">2025–2026</div>
-<div class="proj">Machine learning, deep learning, and causal AI applied to type 2 diabetes.</div></div>
+<div class="proj">Machine learning, deep learning, and causal AI applied to type 2 diabetes.</div></div>
 <div class="mentee"><div class="who">High school student <span>· iHARP Education and Outreach Program</span></div><div class="yrs">2022–2023</div>
-<div class="proj">Machine learning for Arctic sea ice prediction, with research methods and academic writing. <span class="outcome">Honorable Mention, UMBC IS Student Research Symposium 2023</span></div></div>
-<div class="mentee"><div class="who">About 20 undergraduate thesis students <span>· Port City International University, Bangladesh</span></div><div class="yrs">2018–2021</div>
-<div class="proj">Projects in financial time series forecasting, medical image analysis, air quality prediction, sentiment analysis of Bangla text, and human-computer interaction. None of the students had research experience before; four theses led to six peer‑reviewed papers. <span class="outcome">6 papers</span></div></div>
+<div class="proj">Machine learning for Arctic sea ice prediction, with research methods and academic writing. <span class="outcome">Honorable Mention, UMBC IS Student Research Symposium 2023</span></div></div>
+<div class="mentee"><div class="who">About 20 undergraduate thesis students <span>· Port City International University in Bangladesh</span></div><div class="yrs">2018–2021</div>
+<div class="proj">Projects in financial time series forecasting, medical image analysis, air quality prediction, sentiment analysis of Bangla text, and human-computer interaction. None of the students had research experience before; four theses led to six peer-reviewed papers. <span class="outcome">6 papers</span></div></div>
 <ul class="rows">
-<li><span class="when">2020, 2021</span><span class="what"><b>Md Saiful Islam</b><p>A review of FOREX currency prediction, <i>Algorithms</i> (2020), and foreign exchange rate prediction with a GRU-LSTM hybrid network, <i>Soft Computing Letters</i> (2021).</p></span></li>
-<li><span class="when">2021</span><span class="what"><b>Polash Dey</b><p>Recurrent neural networks for stock price prediction across frequency domains, <i>Algorithms</i>.</p></span></li>
-<li><span class="when">2021</span><span class="what"><b>Tasnim Afroze</b><p>Glaucoma detection with Inception-v3, International Conference on Applied Intelligence and Informatics.</p></span></li>
-<li><span class="when">2019, 2020</span><span class="what"><b>Dipankar Gupta</b><p>Bangla voice command recognition, IEEE RAAICON (2019), and a gesture-based mouse and keyboard, ICO (2020).</p></span></li>
+<li><span class="when">2020, 2021</span><div class="what"><b>Md Saiful Islam</b><p>A review of FOREX currency prediction, <i>Algorithms</i> (2020), and foreign exchange rate prediction with a GRU-LSTM hybrid network, <i>Soft Computing Letters</i> (2021).</p></div></li>
+<li><span class="when">2021</span><div class="what"><b>Polash Dey</b><p>Recurrent neural networks for stock price prediction across frequency domains, <i>Algorithms</i>.</p></div></li>
+<li><span class="when">2021</span><div class="what"><b>Tasnim Afroze</b><p>Glaucoma detection with Inception-v3, International Conference on Applied Intelligence and Informatics.</p></div></li>
+<li><span class="when">2019, 2020</span><div class="what"><b>Dipankar Gupta</b><p>Bangla voice command recognition, IEEE RAAICON (2019), and a gesture-based mouse and keyboard, ICO (2020).</p></div></li>
 </ul></section>
 </main>
 <div class="band"><div class="wrap">
 <div><h3>Get in touch</h3>
-<p>I am always happy to talk about research, collaborations, and teaching.</p>
-<div class="where"><div><i class="fa-solid fa-building-columns"></i>Department of Information Systems, UMBC</div>
-<div><i class="fa-solid fa-location-dot"></i>Baltimore, Maryland</div></div></div>
+<p>I am always happy to talk about research, collaborations, and teaching.</p>
+<div class="where"><div><i aria-hidden="true" class="fa-solid fa-building-columns"></i>Department of Information Systems, UMBC</div>
+<div><i aria-hidden="true" class="fa-solid fa-location-dot"></i>Baltimore, Maryland</div></div></div>
 <div class="cbtns">
-<a href="mailto:emamh1@umbc.edu"><i class="fa-solid fa-envelope"></i>Email</a>
-<a href="https://scholar.google.com/citations?user=ZDVEJJMAAAAJ" rel="noopener" target="_blank"><i class="fa-brands fa-google-scholar"></i>Google Scholar</a>
-<a href="https://github.com/ehfahad/" rel="noopener" target="_blank"><i class="fa-brands fa-github"></i>GitHub</a>
-<a href="https://www.linkedin.com/in/hossainemam/" rel="noopener" target="_blank"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
-<a href="https://orcid.org/0000-0002-6422-1895" rel="noopener" target="_blank"><i class="fa-brands fa-orcid"></i>ORCID</a>
-<a href="assets/Hossain_Emam_CV.pdf" rel="noopener" target="_blank"><i class="fa-solid fa-file-arrow-down"></i>CV</a>
+<a href="mailto:emamh1@umbc.edu"><i aria-hidden="true" class="fa-solid fa-envelope"></i>Email</a>
+<a href="https://scholar.google.com/citations?user=ZDVEJJMAAAAJ" rel="noopener" target="_blank"><i aria-hidden="true" class="fa-brands fa-google-scholar"></i>Google Scholar</a>
+<a href="https://github.com/ehfahad/" rel="noopener" target="_blank"><i aria-hidden="true" class="fa-brands fa-github"></i>GitHub</a>
+<a href="https://www.linkedin.com/in/hossainemam/" rel="noopener" target="_blank"><i aria-hidden="true" class="fa-brands fa-linkedin"></i>LinkedIn</a>
+<a href="https://orcid.org/0000-0002-6422-1895" rel="noopener" target="_blank"><i aria-hidden="true" class="fa-brands fa-orcid"></i>ORCID</a>
+<a href="assets/Hossain_Emam_CV.pdf" rel="noopener" target="_blank"><i aria-hidden="true" class="fa-solid fa-file-arrow-down"></i>CV</a>
 </div></div></div>
-<footer><div class="wrap"><span>© 2026 Emam Hossain</span><span>Last updated October 2026</span></div></footer>
+<footer><div class="wrap"><span>© 2026 Emam Hossain</span><button class="layout-switch" onclick="toggleLayout()">Use desktop layout</button><span>Last updated <time datetime="2026-10-23">October 23, 2026</time></span></div></footer>
+<dialog aria-labelledby="figure-caption" class="figure-dialog" id="figure-dialog"><button autofocus="" onclick="this.closest('dialog').close()" type="button">Close figure</button><img alt=""/><p id="figure-caption"></p></dialog>
 </body></html>

@@ -2,7 +2,7 @@
 
 <html lang="en">
 <head>
-<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
 <title>Page not found | Emam Hossain</title>
 <meta content="Page not found." name="description"/>
 <meta content="Emam Hossain" name="author"/>
@@ -16,29 +16,31 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
-<link href="/site.css" rel="stylesheet"/><script src="/site.js"></script>
+<link href="/site.css?v=2026-10-23" rel="stylesheet"/><script src="/site.js?v=2026-10-23"></script>
 </head>
 <body>
-<nav><div class="wrap"><a class="brand" href="/index.html"><b>Emam</b> Hossain</a>
-<div class="menu"><a href="/index.html">Home</a><a href="/research.html">Research</a><a href="/publications.html">Publications</a><a href="/teaching.html">Teaching &amp; Mentoring</a><a href="/experience.html">Experience</a><a href="/news.html">News</a><a href="/awards.html">Awards &amp; Service</a></div>
-<div class="navr"><button aria-label="Switch between light and dark mode" onclick="toggleTheme()" title="Light or dark mode"><i class="fa-solid fa-circle-half-stroke"></i></button>
-<button aria-expanded="false" aria-label="Menu" class="menu-btn" onclick="toggleMenu(this)"><i class="fa-solid fa-bars"></i></button></div></div></nav>
-<main class="wrap">
+<a class="skip-link" href="#main">Skip to content</a>
+<nav aria-label="Main navigation"><div class="wrap"><a class="brand" href="/index.html"><b>Emam</b> Hossain</a>
+<div class="menu" id="main-menu"><a href="/index.html">Home</a><a href="/research.html">Research</a><a href="/publications.html">Publications</a><a href="/teaching.html">Teaching</a><a href="/experience.html">Experience</a><a href="/news.html">News</a><a href="/awards.html">Service</a></div>
+<div class="navr"><label class="sr-only" for="theme-mode">Appearance</label><select class="theme-control" id="theme-mode" onchange="setTheme(this.value)" title="Appearance: Auto follows your device"><option value="system">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select>
+<button aria-controls="main-menu" aria-expanded="false" aria-label="Menu" class="menu-btn" onclick="toggleMenu(this)"><i aria-hidden="true" class="fa-solid fa-bars"></i></button></div></div></nav>
+<main class="wrap" id="main" tabindex="-1">
 <div class="pagehead"><p class="eyebrow">Error 404</p><h1>Page not found</h1>
-<p class="lead">The page you are looking for has moved or no longer exists. Try the <a href="/">home page</a> or the menu above.</p></div>
+<p class="lead">The page you are looking for has moved or no longer exists. Try the <a href="/">home page</a> or the menu above.</p></div>
 </main>
 <div class="band"><div class="wrap">
 <div><h3>Get in touch</h3>
-<p>I am always happy to talk about research, collaborations, and teaching.</p>
-<div class="where"><div><i class="fa-solid fa-building-columns"></i>Department of Information Systems, UMBC</div>
-<div><i class="fa-solid fa-location-dot"></i>Baltimore, Maryland</div></div></div>
+<p>I am always happy to talk about research, collaborations, and teaching.</p>
+<div class="where"><div><i aria-hidden="true" class="fa-solid fa-building-columns"></i>Department of Information Systems, UMBC</div>
+<div><i aria-hidden="true" class="fa-solid fa-location-dot"></i>Baltimore, Maryland</div></div></div>
 <div class="cbtns">
-<a href="mailto:emamh1@umbc.edu"><i class="fa-solid fa-envelope"></i>Email</a>
-<a href="https://scholar.google.com/citations?user=ZDVEJJMAAAAJ" rel="noopener" target="_blank"><i class="fa-brands fa-google-scholar"></i>Google Scholar</a>
-<a href="https://github.com/ehfahad/" rel="noopener" target="_blank"><i class="fa-brands fa-github"></i>GitHub</a>
-<a href="https://www.linkedin.com/in/hossainemam/" rel="noopener" target="_blank"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
-<a href="https://orcid.org/0000-0002-6422-1895" rel="noopener" target="_blank"><i class="fa-brands fa-orcid"></i>ORCID</a>
-<a href="/assets/Hossain_Emam_CV.pdf" rel="noopener" target="_blank"><i class="fa-solid fa-file-arrow-down"></i>CV</a>
+<a href="mailto:emamh1@umbc.edu"><i aria-hidden="true" class="fa-solid fa-envelope"></i>Email</a>
+<a href="https://scholar.google.com/citations?user=ZDVEJJMAAAAJ" rel="noopener" target="_blank"><i aria-hidden="true" class="fa-brands fa-google-scholar"></i>Google Scholar</a>
+<a href="https://github.com/ehfahad/" rel="noopener" target="_blank"><i aria-hidden="true" class="fa-brands fa-github"></i>GitHub</a>
+<a href="https://www.linkedin.com/in/hossainemam/" rel="noopener" target="_blank"><i aria-hidden="true" class="fa-brands fa-linkedin"></i>LinkedIn</a>
+<a href="https://orcid.org/0000-0002-6422-1895" rel="noopener" target="_blank"><i aria-hidden="true" class="fa-brands fa-orcid"></i>ORCID</a>
+<a href="/assets/Hossain_Emam_CV.pdf" rel="noopener" target="_blank"><i aria-hidden="true" class="fa-solid fa-file-arrow-down"></i>CV</a>
 </div></div></div>
-<footer><div class="wrap"><span>© 2026 Emam Hossain</span><span>Last updated October 2026</span></div></footer>
+<footer><div class="wrap"><span>© 2026 Emam Hossain</span><button class="layout-switch" onclick="toggleLayout()">Use desktop layout</button><span>Last updated <time datetime="2026-10-23">October 23, 2026</time></span></div></footer>
+<dialog aria-labelledby="figure-caption" class="figure-dialog" id="figure-dialog"><button autofocus="" onclick="this.closest('dialog').close()" type="button">Close figure</button><img alt=""/><p id="figure-caption"></p></dialog>
 </body></html>

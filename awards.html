@@ -2,7 +2,7 @@
 
 <html lang="en">
 <head>
-<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
 <title>Awards &amp; Service | Emam Hossain</title>
 <meta content="Honors, awards, reviewing, and service of Emam Hossain." name="description"/>
 <meta content="Emam Hossain" name="author"/>
@@ -16,44 +16,46 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
-<link href="site.css" rel="stylesheet"/><script src="site.js"></script>
+<link href="site.css?v=2026-10-23" rel="stylesheet"/><script src="site.js?v=2026-10-23"></script>
 </head>
 <body>
-<nav><div class="wrap"><a class="brand" href="index.html"><b>Emam</b> Hossain</a>
-<div class="menu"><a href="index.html">Home</a><a href="research.html">Research</a><a href="publications.html">Publications</a><a href="teaching.html">Teaching &amp; Mentoring</a><a href="experience.html">Experience</a><a href="news.html">News</a><a class="active" href="awards.html">Awards &amp; Service</a></div>
-<div class="navr"><button aria-label="Switch between light and dark mode" onclick="toggleTheme()" title="Light or dark mode"><i class="fa-solid fa-circle-half-stroke"></i></button>
-<button aria-expanded="false" aria-label="Menu" class="menu-btn" onclick="toggleMenu(this)"><i class="fa-solid fa-bars"></i></button></div></div></nav>
-<main class="wrap">
+<a class="skip-link" href="#main">Skip to content</a>
+<nav aria-label="Main navigation"><div class="wrap"><a class="brand" href="index.html"><b>Emam</b> Hossain</a>
+<div class="menu" id="main-menu"><a href="index.html">Home</a><a href="research.html">Research</a><a href="publications.html">Publications</a><a href="teaching.html">Teaching</a><a href="experience.html">Experience</a><a href="news.html">News</a><a aria-current="page" class="active" href="awards.html">Service</a></div>
+<div class="navr"><label class="sr-only" for="theme-mode">Appearance</label><select class="theme-control" id="theme-mode" onchange="setTheme(this.value)" title="Appearance: Auto follows your device"><option value="system">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select>
+<button aria-controls="main-menu" aria-expanded="false" aria-label="Menu" class="menu-btn" onclick="toggleMenu(this)"><i aria-hidden="true" class="fa-solid fa-bars"></i></button></div></div></nav>
+<main class="wrap" id="main" tabindex="-1">
 <div class="pagehead"><p class="eyebrow">Awards &amp; Service</p><h1>Awards &amp; Service</h1>
-<p class="lead">Recognition for my research, and the ways I serve the research community.</p></div>
-<section><p class="eyebrow">Recognition</p><h2>Honors and awards</h2><div class="aw"><span class="y">2026</span><div><span class="awt"><b>Doctorate Student Award</b> · <span style="color:var(--muted)">COEIT Research Day, UMBC</span></span><p>For work on refining partial causal graphs through interventional representation learning.</p></div></div><div class="aw"><span class="y">2025</span><div><span class="awt"><b>Doctorate Student Award (Honorable Mention)</b> · <span style="color:var(--muted)">COEIT Research Day, UMBC</span></span><p>For supraglacial lake time series classification.</p></div></div><div class="aw"><span class="y">2023</span><div><span class="awt"><b>Survey Certification</b> · <span style="color:var(--muted)">Transactions on Machine Learning Research (TMLR)</span></span><p>For our survey of causal discovery methods.</p></div></div><div class="aw"><span class="y">2024–2026</span><div><span class="awt"><b>Travel and professional development grants</b> · <span style="color:var(--muted)">UMBC</span></span><p>Conference travel grants from the Department of Information Systems to present at IEEE ICMLA 2025 and ACM SIGSPATIAL PolDS 2026, and a Professional Development Grant from the Graduate Student Association.</p></div></div></section>
+<p class="lead">Recognition for my research, and the ways I serve the research community.</p></div>
+<section><p class="eyebrow">Recognition</p><h2>Honors and awards</h2><div class="aw"><span class="y">2026</span><div><span class="awt"><b>Doctorate Student Award</b> · <span style="color:var(--muted)">COEIT Research Day, UMBC</span></span><p>For work on refining partial causal graphs through interventional representation learning.</p></div></div><div class="aw"><span class="y">2025</span><div><span class="awt"><b>Doctorate Student Award (Honorable Mention)</b> · <span style="color:var(--muted)">COEIT Research Day, UMBC</span></span><p>For supraglacial lake time series classification.</p></div></div><div class="aw"><span class="y">2023</span><div><span class="awt"><b>Survey Certification</b> · <span style="color:var(--muted)">Transactions on Machine Learning Research (TMLR)</span></span><p>For our survey of causal discovery methods.</p></div></div><div class="aw"><span class="y">2024–2026</span><div><span class="awt"><b>Travel and professional development grants</b> · <span style="color:var(--muted)">UMBC</span></span><p>Conference travel grants from the Department of Information Systems to present at IEEE ICMLA 2025 and ACM SIGSPATIAL PolDS 2026, and a Professional Development Grant from the Graduate Student Association.</p></div></div></section>
 <section><p class="eyebrow">Service</p><h2>Service to the community</h2><div class="svgrid">
-<div class="sv"><h3><i class="fa-solid fa-magnifying-glass"></i>Reviewing</h3>
-<p class="k">Conferences</p><p>AAAI 2027 · ICLR 2025, 2026 · NeurIPS 2026 · AISTATS 2025, 2026 · KDD 2025 · MLHC 2023–2026 · ML4H 2024, 2025 · ICDH 2023</p>
-<p class="k">Journals</p><p><i>IEEE Computer</i> · <i>ACM Transactions on Internet Technology</i> · <i>Applied Artificial Intelligence</i> · <i>Information Fusion</i> · <i>International Journal of Approximate Reasoning</i></p></div>
-<div class="sv"><h3><i class="fa-solid fa-trophy"></i>Community challenge</h3>
-<p>Support team lead for iHARP’s coastal flooding sub-challenge in the <a href="https://iharp.umbc.edu/nsf-hdr-machine-learning-challenge/" rel="noopener" target="_blank">NSF HDR Machine Learning Challenge</a> (2025–2026): 2,709 submissions from 151 participants. I also led iHARP’s session at the NSF HDR virtual hackathon and supported the awards session at the FARR Workshop.</p></div>
-<div class="sv"><h3><i class="fa-solid fa-hands-holding-circle"></i>Outreach</h3>
-<p>Invited panelist, “Higher Studies: Insights from Our Mentors,” PCIU Computer Club, Port City International University, Bangladesh (2026).</p>
-<p>iHARP representative, UMBC Earth Month Community Day (2024).</p></div>
-<div class="sv"><h3><i class="fa-solid fa-code"></i>Programming contests and memberships</h3>
-<p>Staff, ICPC Southeast USA Regional Contest (2022).</p>
-<p>Volunteer, National High School Programming Contest, Bangladesh (2015).</p>
-<p class="k">Memberships</p><p>ACM · IEEE · AMS</p></div>
+<div class="sv"><h3><i aria-hidden="true" class="fa-solid fa-magnifying-glass"></i>Reviewing</h3>
+<p class="k">Conferences</p><p>AAAI 2027 · ICLR 2025, 2026, 2027 · NeurIPS 2026 · AISTATS 2025, 2026 · KDD 2025 · MLHC 2023–2026 · ML4H 2024, 2025 · ICDH 2023</p>
+<p class="k">Journals</p><p><i>IEEE Computer</i> · <i>ACM Transactions on Internet Technology</i> · <i>Applied Artificial Intelligence</i> · <i>Information Fusion</i> · <i>International Journal of Approximate Reasoning</i></p></div>
+<div class="sv"><h3><i aria-hidden="true" class="fa-solid fa-trophy"></i>Community challenge</h3>
+<p>Team lead for iHARP’s coastal flooding sub-challenge in the <a href="https://iharp.umbc.edu/nsf-hdr-machine-learning-challenge/" rel="noopener" target="_blank">NSF HDR Machine Learning Challenge</a> (2025–2026): 2,709 submissions from 151 participants. I also led iHARP’s session at the NSF HDR virtual hackathon and supported the awards session at the FARR Workshop.</p></div>
+<div class="sv"><h3><i aria-hidden="true" class="fa-solid fa-hands-holding-circle"></i>Outreach</h3>
+<p>Invited panelist, “Higher Studies: Insights from Our Mentors,” PCIU Computer Club, Port City International University in Bangladesh (2026).</p>
+<p>iHARP representative, UMBC Earth Month Community Day (2024).</p></div>
+<div class="sv"><h3><i aria-hidden="true" class="fa-solid fa-code"></i>Programming contests and memberships</h3>
+<p>Staff, ICPC Southeast USA Regional Contest (2022).</p>
+<p>Volunteer, National High School Programming Contest, Bangladesh (2015).</p>
+<p class="k">Memberships</p><p>ACM · IEEE · AMS</p></div>
 </div></section>
 </main>
 <div class="band"><div class="wrap">
 <div><h3>Get in touch</h3>
-<p>I am always happy to talk about research, collaborations, and teaching.</p>
-<div class="where"><div><i class="fa-solid fa-building-columns"></i>Department of Information Systems, UMBC</div>
-<div><i class="fa-solid fa-location-dot"></i>Baltimore, Maryland</div></div></div>
+<p>I am always happy to talk about research, collaborations, and teaching.</p>
+<div class="where"><div><i aria-hidden="true" class="fa-solid fa-building-columns"></i>Department of Information Systems, UMBC</div>
+<div><i aria-hidden="true" class="fa-solid fa-location-dot"></i>Baltimore, Maryland</div></div></div>
 <div class="cbtns">
-<a href="mailto:emamh1@umbc.edu"><i class="fa-solid fa-envelope"></i>Email</a>
-<a href="https://scholar.google.com/citations?user=ZDVEJJMAAAAJ" rel="noopener" target="_blank"><i class="fa-brands fa-google-scholar"></i>Google Scholar</a>
-<a href="https://github.com/ehfahad/" rel="noopener" target="_blank"><i class="fa-brands fa-github"></i>GitHub</a>
-<a href="https://www.linkedin.com/in/hossainemam/" rel="noopener" target="_blank"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
-<a href="https://orcid.org/0000-0002-6422-1895" rel="noopener" target="_blank"><i class="fa-brands fa-orcid"></i>ORCID</a>
-<a href="assets/Hossain_Emam_CV.pdf" rel="noopener" target="_blank"><i class="fa-solid fa-file-arrow-down"></i>CV</a>
+<a href="mailto:emamh1@umbc.edu"><i aria-hidden="true" class="fa-solid fa-envelope"></i>Email</a>
+<a href="https://scholar.google.com/citations?user=ZDVEJJMAAAAJ" rel="noopener" target="_blank"><i aria-hidden="true" class="fa-brands fa-google-scholar"></i>Google Scholar</a>
+<a href="https://github.com/ehfahad/" rel="noopener" target="_blank"><i aria-hidden="true" class="fa-brands fa-github"></i>GitHub</a>
+<a href="https://www.linkedin.com/in/hossainemam/" rel="noopener" target="_blank"><i aria-hidden="true" class="fa-brands fa-linkedin"></i>LinkedIn</a>
+<a href="https://orcid.org/0000-0002-6422-1895" rel="noopener" target="_blank"><i aria-hidden="true" class="fa-brands fa-orcid"></i>ORCID</a>
+<a href="assets/Hossain_Emam_CV.pdf" rel="noopener" target="_blank"><i aria-hidden="true" class="fa-solid fa-file-arrow-down"></i>CV</a>
 </div></div></div>
-<footer><div class="wrap"><span>© 2026 Emam Hossain</span><span>Last updated October 2026</span></div></footer>
+<footer><div class="wrap"><span>© 2026 Emam Hossain</span><button class="layout-switch" onclick="toggleLayout()">Use desktop layout</button><span>Last updated <time datetime="2026-10-23">October 23, 2026</time></span></div></footer>
+<dialog aria-labelledby="figure-caption" class="figure-dialog" id="figure-dialog"><button autofocus="" onclick="this.closest('dialog').close()" type="button">Close figure</button><img alt=""/><p id="figure-caption"></p></dialog>
 </body></html>
