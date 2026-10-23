@@ -1,8 +1,8 @@
 /* Theme runs in the head to apply the device preference before first paint. */
 'use strict';
 var themeMedia = window.matchMedia('(prefers-color-scheme: dark)');
-var themeMode = readPreference('site-theme-mode', 'system');
-if (!['system', 'light', 'dark'].includes(themeMode)) themeMode = 'system';
+// A manual choice lasts only for this page load. Never restore a saved theme.
+var themeOverride = null;
 
 function readPreference(key, fallback) {
   try { return localStorage.getItem(key) || fallback; } catch (e) { return fallback; }
@@ -11,28 +11,31 @@ function savePreference(key, value) {
   try { localStorage.setItem(key, value); } catch (e) { /* Private storage may be disabled. */ }
 }
 function applyTheme() {
-  var dark = themeMode === 'dark' || (themeMode === 'system' && themeMedia.matches);
+  var dark = themeOverride === null ? themeMedia.matches : themeOverride;
   document.documentElement.dataset.theme = dark ? 'dark' : 'light';
-  var control = document.getElementById('theme-mode');
-  if (control) control.value = themeMode;
+  var control = document.getElementById('theme-toggle');
+  if (control) {
+    control.setAttribute('aria-pressed', String(dark));
+    control.title = dark ? 'Switch to light mode' : 'Switch to dark mode';
+  }
   var color = document.querySelector('meta[name="theme-color"]');
   if (color) color.content = dark ? '#12161c' : '#1d4e89';
 }
-function setTheme(mode) {
-  themeMode = ['system', 'light', 'dark'].includes(mode) ? mode : 'system';
-  savePreference('site-theme-mode', themeMode);
+function toggleTheme() {
+  themeOverride = document.documentElement.dataset.theme !== 'dark';
   applyTheme();
 }
 if (themeMedia.addEventListener) themeMedia.addEventListener('change', applyTheme);
 else themeMedia.addListener(applyTheme);
 applyTheme();
 window.addEventListener('storage', function (event) {
-  if (event.key === 'site-theme-mode' || event.key === null) {
-    themeMode = readPreference('site-theme-mode', 'system');
-    if (!['system', 'light', 'dark'].includes(themeMode)) themeMode = 'system';
+  if (event.key === 'site-layout' || event.key === null) applyLayout();
+});
+window.addEventListener('pageshow', function (event) {
+  if (event.persisted) {
+    themeOverride = null;
     applyTheme();
   }
-  if (event.key === 'site-layout') applyLayout();
 });
 
 /* Some phone browsers keep the phone viewport for "Request desktop site".
