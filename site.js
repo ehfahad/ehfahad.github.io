@@ -1,17 +1,19 @@
-/* Theme runs in the head to apply the device preference before first paint. */
+/* Theme runs in the head to apply the theme before first paint. */
 'use strict';
 var themeMedia = window.matchMedia('(prefers-color-scheme: dark)');
-// A manual choice lasts only for this page load. Never restore a saved theme.
-var themeOverride = null;
+// No choice yet: follow the device theme (and its live changes).
+// A manual choice applies to every page until this browser tab is closed (sessionStorage), never longer.
+var THEME_KEY = 'site-theme-tab';
 
-function readPreference(key, fallback) {
-  try { return localStorage.getItem(key) || fallback; } catch (e) { return fallback; }
+function readTabTheme() {
+  try { var v = sessionStorage.getItem(THEME_KEY); return v === 'dark' || v === 'light' ? v : null; } catch (e) { return null; }
 }
-function savePreference(key, value) {
-  try { localStorage.setItem(key, value); } catch (e) { /* Private storage may be disabled. */ }
+function saveTabTheme(value) {
+  try { sessionStorage.setItem(THEME_KEY, value); } catch (e) { /* Storage may be disabled: the choice then lasts for this page. */ }
 }
+var themeOverride = readTabTheme();
 function applyTheme() {
-  var dark = themeOverride === null ? themeMedia.matches : themeOverride;
+  var dark = themeOverride === null ? themeMedia.matches : themeOverride === 'dark';
   document.documentElement.dataset.theme = dark ? 'dark' : 'light';
   var control = document.getElementById('theme-toggle');
   if (control) {
@@ -22,39 +24,19 @@ function applyTheme() {
   if (color) color.content = dark ? '#12161c' : '#1d4e89';
 }
 function toggleTheme() {
-  themeOverride = document.documentElement.dataset.theme !== 'dark';
+  themeOverride = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+  saveTabTheme(themeOverride);
   applyTheme();
 }
 if (themeMedia.addEventListener) themeMedia.addEventListener('change', applyTheme);
 else themeMedia.addListener(applyTheme);
 applyTheme();
-window.addEventListener('storage', function (event) {
-  if (event.key === 'site-layout' || event.key === null) applyLayout();
+window.addEventListener('pageshow', function () {
+  themeOverride = readTabTheme();
+  applyTheme();
 });
-window.addEventListener('pageshow', function (event) {
-  if (event.persisted) {
-    themeOverride = null;
-    applyTheme();
-  }
-});
-
-/* Some phone browsers keep the phone viewport for "Request desktop site".
-   This explicit fallback changes the viewport without user-agent guessing. */
-function applyLayout() {
-  var desktop = readPreference('site-layout', 'responsive') === 'desktop';
-  document.documentElement.dataset.layout = desktop ? 'desktop' : 'responsive';
-  document.querySelector('meta[name="viewport"]').content = desktop
-    ? 'width=1100, viewport-fit=cover'
-    : 'width=device-width, initial-scale=1, viewport-fit=cover';
-  document.querySelectorAll('.layout-switch').forEach(function (button) {
-    button.textContent = desktop ? 'Use responsive layout' : 'Use desktop layout';
-  });
-}
-function toggleLayout() {
-  savePreference('site-layout', document.documentElement.dataset.layout === 'desktop' ? 'responsive' : 'desktop');
-  applyLayout();
-}
-applyLayout();
+// Remove settings saved by earlier versions (permanent theme keys and the retired desktop-layout switch).
+try { ['theme', 'site-theme-mode', 'site-layout'].forEach(function (key) { localStorage.removeItem(key); }); } catch (e) { /* ignore */ }
 
 function toggleMenu(button) {
   var nav = button.closest('nav');
@@ -114,7 +96,6 @@ function filt(category) {
 
 document.addEventListener('DOMContentLoaded', function () {
   applyTheme();
-  applyLayout();
   tabFromUrl();
   document.querySelectorAll('[role="tablist"]').forEach(function (list) {
     list.addEventListener('keydown', function (event) {
